@@ -450,14 +450,12 @@ public class RangeTest {
     	assertTrue("Expanding the range -10, 10 by 25% in both directiosn shoudl yield -15, 15",
     	newRange.equals(Range.expand(exampleRange,0.25,0.5)));
     }
-    /*
     @Test
     public void testExpandReverseLowerAndUpper() {
     	Range newRange = new Range(-10,10);
     	assertTrue("Expanding each range by -100% should swap the lower and upper and result in the same range -10, 10",
     	newRange.equals(Range.expand(exampleRange,-1,-1)));
     }
-    */
     
     // tests for shift
     @Test
