@@ -2,7 +2,7 @@ package org.jfree.data.test;
 
 import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.*;
 
-public class RangeTest {
+public class RangeTestOld {
     private Range exampleRange, exampleRangePositive, exampleRangeNegative, exampleRangeZero,exampleLargeRange, decimalRange, NaNRange;
     @BeforeClass public static void setUpBeforeClass() throws Exception {
     }
@@ -467,19 +467,19 @@ public class RangeTest {
     @Test
     public void testShiftDeltaGreaterThanLowerBoundToZero() {
     	Range newRange = new Range(0,25);
-    	assertTrue("Shifting a positive delta of 15 with no zero crossing should yield a range of 0, 25",
+    	assertTrue("Shifting a positive delta of 15 with no zero crossing should yield a range of -5, 15",
     	newRange.equals(Range.shift(exampleRange, 15)));
     }
     @Test
     public void testShiftDeltaGreaterThanUpperBoundToZero() {
     	Range newRange = new Range(-25,0);
-    	assertTrue("Shifting a negative of 15 with no zero crossing should yield a range of -25, 0",
+    	assertTrue("Shifting a positive of 15 with no zero crossing should yield a range of -5, 15",
     	newRange.equals(Range.shift(exampleRange, -15)));
     }
     @Test
     public void testShiftRangeWithZeroBound() {
     	Range newRange = new Range(10,10);
-    	assertTrue("Shifting a positive of 10 should yield a range of 10, 10",
+    	assertTrue("Shifting a positive of 5 should yield a range of -5, 15",
     	newRange.equals(Range.shift(exampleRangeZero, 10)));
     }
     @Test
@@ -553,108 +553,8 @@ public class RangeTest {
     	assertTrue("The range -10.0,10.0 returns the string Range[-10.0,10.0]",
     	str.equals(exampleRange.toString()));
     }
-    
-    // mutation test for intersects
-    @Test
-    public void testIntersectsMutation157() {
-    	assertFalse("The range -10, -10 does not intersect with the range -10,10",
-    	exampleRange.intersects(-10,-10));
-    }
-    
-    @Test
-    public void testIntersectsMutation158() {
-    	assertFalse("The range -20, -10 does not intersect with the range -10,10",
-    	exampleRange.intersects(-20,-10));
-    }
       
-    @Test
-    public void testIntersectsMutation161_1() {
-    	assertFalse("The range 10,20 does intersect with the range -10,10",
-		exampleRange.intersects(10,20));
-    }
     
-    @Test 
-    public void testIntersectsMutation161_2() {
-    	assertTrue("The range 5,5 does intersect the range -10,10",
-		exampleRange.intersects(5,5));
-    }
-    
-    @Test 
-    public void testIntersectsMutation176() {
-    	Range newRange = new Range(-15,-11);
-    	assertFalse("The range -15,-11 is not contained in the range -10,10",
-    	exampleRange.intersects(newRange));
-    }
-    
-    // Tests for constrain mutations(){
-    @Test
-    public void testConstrainsMutation190() {
-    	assertEquals("The value -10 is closest to -10 in the range -10,10",
-		-10, exampleRange.constrain(-10),.000000001d);
-    }
-    
-    @Test
-    public void testConstrainsMutation193() {
-    	assertEquals("The value 10 is closest to 10 in the range -10,10",
-		10, exampleRange.constrain(10),.000000001d);
-    }
-    
-    // tests for expandToInclude Mutations
-    @Test
-    public void testExpandToIncluedMutation305() {
-    	assertEquals("The value -10 is in the range -10,10 so the range is unaltered",
-		exampleRange, Range.expandToInclude(exampleRange,-10));
-    }
-    @Test
-    public void testExpandToIncluedMutation308() {
-    	assertEquals("The value 10 is in the range -10,10 so the range is unaltered",
-		exampleRange, Range.expandToInclude(exampleRange, 10));
-    }
-    
-    //tests for expand mutations
-    @Test(expected = IllegalArgumentException.class)
-    public void testShiftMutation329() {
-    	Range.expand(null, 10, 10);
-    }
-    @Test
-    public void testExpandMutation333() {
-    	assertEquals("The range 0,0 expanded by 0% is still 0,0",
-		exampleRangeZero, Range.expand(exampleRangeZero, 0, 0));
-    }
-    
-    // tests for shift Mutations
-    @Test(expected = IllegalArgumentException.class)
-    public void testShiftMutation368() {
-    	Range.shift(null, 10);
-    }
-    
-    //test for shiftWithNonZeroCrossing mutations
-    @Test
-    public void testShiftWithNonZeroCrossingMutation390() {
-    	Range newRange = new Range(-10,-10);
-    	assertEquals("A shift of 0 will not change the range",
-    	newRange,Range.shift(exampleRangeZero, -10, false));
-    }
-    
-    // test for scale mutations
-    @Test(expected = IllegalArgumentException.class)
-    public void testScaleMutation412() {
-    	Range.scale(null, 10);
-    }
-    @Test
-    public void testScaleMutation413() {
-    	Range newRange = new Range(0,0);
-    	assertEquals("A shift of 0 will not change the range",
-    	newRange,Range.scale(exampleRangeZero, 0));
-    }
-    
-    // tests for hashCode()
-    @Test()
-    public void testHashCode() {
-    	assertEquals("The range -10, 10 has a hashCode 70778880",
-		70778880, exampleRange.hashCode());
-    	System.out.println(exampleRange.hashCode());
-    }
     @After
     public void tearDown() throws Exception {
     }

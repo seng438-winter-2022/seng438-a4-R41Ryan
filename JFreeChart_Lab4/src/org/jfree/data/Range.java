@@ -331,8 +331,11 @@ public strictfp class Range implements Serializable {
         double lower = range.getLowerBound() - length * lowerMargin;
         double upper = range.getUpperBound() + length * upperMargin;
         if (lower > upper) {
-            lower = lower / 2.0 + upper / 2.0;
-            upper = lower;
+        	double temp = lower;
+        	lower = upper;
+        	upper = temp;
+//            lower = lower / 2.0 + upper / 2.0;
+//            upper = lower;
         }
         return new Range(lower, upper);
     }
