@@ -1,0 +1,485 @@
+{
+  "id": "92ed8afc-fa02-43a5-9072-5f5393267551",
+  "version": "2.0",
+  "name": "Seng438_Lab4",
+  "url": "https://bestbuy.ca",
+  "tests": [{
+    "id": "d82d6b81-0183-4248-bacd-6f6d96f162ef",
+    "name": "FrenchTranslationTest",
+    "commands": [{
+      "id": "4063ea13-3a96-421f-92f3-9a9755475736",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c8321dc-b6fa-4007-8e17-260921f77fc0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x440",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bd72c5d-b7f0-4bc8-b88e-f8afae39a052",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.signInOutNavContainer_2mwkw .accountLabel_2-flX",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "04e7852f-25eb-4f34-86fa-7f86d0b7fcae",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.signInOutNavContainer_2mwkw .accountLabel_2-flX",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2833ed03-d77c-4c80-be9e-5601f87f1e16",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.signInOutNavContainer_2mwkw .accountIcon_1jvGP",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountIcon_1jvGP", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "181bf7b3-4fc1-4705-86f1-0ab1e8e09557",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Français",
+      "targets": [
+        ["linkText=Français", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Français')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/fr-ca')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Français')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cc32d40-521f-45f2-8365-9ae6628da99d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=English",
+      "targets": [
+        ["linkText=English", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'English')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/en-ca')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'English')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d72d0cbc-6ea7-4927-b9ed-470782607305",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=English",
+      "targets": [
+        ["linkText=English", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'English')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/en-ca')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'English')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "591c4c23-e3d8-47a8-a38b-98c9607d1e0e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Best Buy Affaires",
+      "targets": [
+        ["linkText=Best Buy Affaires", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Best Buy Affaires')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/fr-ca/a-propos/best-buy-affaires/bltfad9143fefc09dc6')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Best Buy Affaires')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f4072d2-076e-42d1-8c8b-7aea8107acdf",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Best Buy Affaires",
+      "targets": [
+        ["linkText=Best Buy Affaires", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Best Buy Affaires')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/fr-ca/a-propos/best-buy-affaires/bltfad9143fefc09dc6')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Best Buy Affaires')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3362003e-26a3-49dc-875a-89c6441eff13",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=État de la commande",
+      "targets": [
+        ["linkText=État de la commande", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'État de la commande')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/order/fr-ca')]", "xpath:href"],
+        ["xpath=//header/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'État de la commande')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e882959a-55fb-4c93-9d1b-c61769fd14dd",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=État de la commande",
+      "targets": [
+        ["linkText=État de la commande", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'État de la commande')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/order/fr-ca')]", "xpath:href"],
+        ["xpath=//header/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'État de la commande')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "707d8c0f-12ba-46c9-ab21-800ddbfbe40d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,652)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6b0221a-d5f1-4ba5-b52b-e48f25478844",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.storesLabel_184Qo",
+      "targets": [
+        ["css=.storesLabel_184Qo", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": "Magasins"
+    }, {
+      "id": "07912bf3-5604-4c7e-8ae8-a468bc4e1a9a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.label",
+      "targets": [
+        ["css=.label", "css:finder"],
+        ["xpath=//div[@id='cartIcon']/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Panier')]", "xpath:innerText"]
+      ],
+      "value": "Panier"
+    }]
+  }, {
+    "id": "f124c7cd-cf46-4293-85f5-0ca3378e43ab",
+    "name": "DropdownMenuTest",
+    "commands": [{
+      "id": "a5ac4c3e-2222-41ad-b8f9-e585dd6e2e08",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "782a9a29-9926-4427-a4b0-93e1c56cf0ea",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdec6903-84ee-45bf-aa47-40d4a67964e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(4) > .dealsContainer_1k5wi .white_3qh7k",
+      "targets": [
+        ["css=li:nth-child(4) > .dealsContainer_1k5wi .white_3qh7k", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "76b13781-593c-489f-b337-557e44abd03d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__",
+      "targets": [
+        ["css=.flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(3) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/div[2]/div/ul/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/ul/li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Geek Squad Services')]", "xpath:innerText"]
+      ],
+      "value": "Geek Squad Services"
+    }, {
+      "id": "f9e5a249-7961-4044-9800-b7cbe259c11d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(4) .menuItemText_1yd__",
+      "targets": [
+        ["css=.flyoutMenu_2DHKo:nth-child(3) .menuItem_2kIs9:nth-child(4) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/div[2]/div/ul/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/ul/li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'In-Home Advisor')]", "xpath:innerText"]
+      ],
+      "value": "In-Home Advisor"
+    }, {
+      "id": "4970c82d-daa1-4594-833f-83fc7539c649",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.menuItem_2kIs9:nth-child(5) .menuItemText_1yd__",
+      "targets": [
+        ["css=.menuItem_2kIs9:nth-child(5) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/div[2]/div/ul/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Best Buy Business')]", "xpath:innerText"]
+      ],
+      "value": "Best Buy Business"
+    }, {
+      "id": "9372809b-eb9f-4bc4-9720-17b1f8d9c763",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.menuItem_2kIs9:nth-child(6) .menuItemText_1yd__",
+      "targets": [
+        ["css=.menuItem_2kIs9:nth-child(6) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/div[2]/div/ul/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Best Buy Health')]", "xpath:innerText"]
+      ],
+      "value": "Best Buy Health"
+    }, {
+      "id": "2a91fa94-e107-467c-b38a-38869a40a81f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.menuItem_2kIs9:nth-child(7) .menuItemText_1yd__",
+      "targets": [
+        ["css=.menuItem_2kIs9:nth-child(7) .menuItemText_1yd__", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/div[2]/div/ul/li[7]/a/span", "xpath:idRelative"],
+        ["xpath=//li[7]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Trade-In Program')]", "xpath:innerText"]
+      ],
+      "value": "Trade-In Program"
+    }, {
+      "id": "bbcc286c-8513-4a9b-8b76-d32c0c7e97b0",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Electronics Recycling",
+      "targets": [
+        ["linkText=Electronics Recycling", "linkText"],
+        ["css=.menuItem_2kIs9:nth-child(8) > .menuLink_3jJMi", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/div[2]/div/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.bestbuy.ca/en-ca/help/haul-away-recycling-and-recalls/battery-and-electronic-recycling-program')]", "xpath:href"],
+        ["xpath=//li[4]/div/div[2]/div/ul/li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Electronics Recycling')]", "xpath:innerText"]
+      ],
+      "value": "Electronics Recycling"
+    }, {
+      "id": "e8e5ecd5-335c-4354-9985-49c9b6e9a140",
+      "comment": "",
+      "command": "click",
+      "target": "css=.activeButton_2iIS_ > span",
+      "targets": [
+        ["css=.activeButton_2iIS_ > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li[4]/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[4]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Services')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "59356c99-97e7-4a27-890f-429d2cc0697c",
+    "name": "OrderStatusTest",
+    "commands": [{
+      "id": "94a979d9-c4c2-40ab-bde0-6985e6fa26e6",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c1a553a-54ef-4476-8e8e-955a4658cfaa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "790x438",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "655a7799-511d-4d88-b1a9-fe40c4b307cc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Order Status",
+      "targets": [
+        ["linkText=Order Status", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Order Status')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/order/en-ca')]", "xpath:href"],
+        ["xpath=//header/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Order Status')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b0d0759-48e5-442e-9148-18f8b4ab9c1a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Order Status",
+      "targets": [
+        ["linkText=Order Status", "linkText"],
+        ["css=.topLinkAnchor_3PJ9l:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Order Status')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/order/en-ca')]", "xpath:href"],
+        ["xpath=//header/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Order Status')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fd9df32-fd10-4111-b866-4c0b00751c58",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,95.19999694824219)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18cd7d78-a3e7-438f-a1ed-c10b7a4bc464",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#scroll-to > span",
+      "targets": [
+        ["css=#scroll-to > span", "css:finder"],
+        ["xpath=//h1[@id='scroll-to']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"]
+      ],
+      "value": "Order History"
+    }]
+  }, {
+    "id": "88e595cd-8318-4cba-8d48-cdc7078410ed",
+    "name": "LogoutTest",
+    "commands": [{
+      "id": "8a0d1737-bf36-410f-99c6-206c6094b677",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/account/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1d735c1-0d2d-42e3-8788-1b02b6c84834",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8333ccaa-be01-491a-99ad-678b2d72d4e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.eJHmN",
+      "targets": [
+        ["css=.eJHmN", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9f97e3a-c5e3-4a70-87ab-5a660c50985e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.PFgX0:nth-child(2)",
+      "targets": [
+        ["css=.PFgX0:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/header/div/div/div/div[2]/div[2]/div/div/div[2]/ul/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "549a1754-b6fc-427f-bac6-51d546c9444e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Account",
+      "targets": [
+        ["linkText=Account", "linkText"],
+        ["css=.SignInOutNavIcon_1TL-_", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.bestbuy.ca/identity/global/signin?redirectUrl=https%3A%2F%2Fwww.bestbuy.ca%2Faccount%2Fen-ca&lang=en-CA')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc6fa638-cc2b-4332-941c-987f2ef5e5e1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Account",
+      "targets": [
+        ["linkText=Account", "linkText"],
+        ["css=.SignInOutNavIcon_1TL-_", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.bestbuy.ca/identity/global/signin?redirectUrl=https%3A%2F%2Fwww.bestbuy.ca%2Faccount%2Fen-ca&lang=en-CA')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c9bb0ad-bd79-4f79-a604-ae3b38f46741",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.accountLabel_2-flX",
+      "targets": [
+        ["css=.accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba8bcc1f-fdfb-41b2-8feb-03462c16a622",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.accountLabel_2-flX",
+      "targets": [
+        ["css=.accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de49a61a-06ed-430f-a9b3-82caea34a96e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.accountLabel_2-flX",
+      "targets": [
+        ["css=.accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": "Account"
+    }]
+  }],
+  "suites": [{
+    "id": "1cb76413-0757-48c6-b661-483307aa972e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d82d6b81-0183-4248-bacd-6f6d96f162ef"]
+  }],
+  "urls": ["https://bestbuy.ca/"],
+  "plugins": []
+}

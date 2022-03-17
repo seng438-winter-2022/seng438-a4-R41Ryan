@@ -554,33 +554,35 @@ public class RangeTest {
     	str.equals(exampleRange.toString()));
     }
     
+    // NEW MUTATION TESTS
+    
     // mutation test for intersects
     @Test
-    public void testIntersectsMutation157() {
+    public void testIntersectsMutationEquivalentRanges() {
     	assertFalse("The range -10, -10 does not intersect with the range -10,10",
     	exampleRange.intersects(-10,-10));
     }
     
     @Test
-    public void testIntersectsMutation158() {
+    public void testIntersectsMutationMeetAtLowerBound() {
     	assertFalse("The range -20, -10 does not intersect with the range -10,10",
     	exampleRange.intersects(-20,-10));
     }
       
     @Test
-    public void testIntersectsMutation161_1() {
+    public void testIntersectsMutationMeetAtUpperBound() {
     	assertFalse("The range 10,20 does intersect with the range -10,10",
 		exampleRange.intersects(10,20));
     }
     
     @Test 
-    public void testIntersectsMutation161_2() {
+    public void testIntersectsMutationZeroWidthIntersectingRange() {
     	assertTrue("The range 5,5 does intersect the range -10,10",
 		exampleRange.intersects(5,5));
     }
     
     @Test 
-    public void testIntersectsMutation176() {
+    public void testIntersectsMutation1DiffAtLowerBound() {
     	Range newRange = new Range(-15,-11);
     	assertFalse("The range -15,-11 is not contained in the range -10,10",
     	exampleRange.intersects(newRange));
@@ -588,73 +590,153 @@ public class RangeTest {
     
     // Tests for constrain mutations(){
     @Test
-    public void testConstrainsMutation190() {
+    public void testConstrainsMutationLowerBound() {
     	assertEquals("The value -10 is closest to -10 in the range -10,10",
 		-10, exampleRange.constrain(-10),.000000001d);
     }
     
     @Test
-    public void testConstrainsMutation193() {
+    public void testConstrainsMutationUpperBound() {
     	assertEquals("The value 10 is closest to 10 in the range -10,10",
 		10, exampleRange.constrain(10),.000000001d);
     }
     
     // tests for expandToInclude Mutations
     @Test
-    public void testExpandToIncluedMutation305() {
+    public void testExpandToIncluedMutationLowerBound() {
+    	Range newRange = new Range(-10,10);
     	assertEquals("The value -10 is in the range -10,10 so the range is unaltered",
-		exampleRange, Range.expandToInclude(exampleRange,-10));
+		newRange, Range.expandToInclude(exampleRange,-10));
     }
     @Test
-    public void testExpandToIncluedMutation308() {
+    public void testExpandToIncluedMutationUpperBound() {
+    	Range newRange = new Range(-10,10);
     	assertEquals("The value 10 is in the range -10,10 so the range is unaltered",
-		exampleRange, Range.expandToInclude(exampleRange, 10));
+    	newRange, Range.expandToInclude(exampleRange, 10));
     }
     
     //tests for expand mutations
     @Test(expected = IllegalArgumentException.class)
-    public void testShiftMutation329() {
+    public void testExpandMutationNullRange() {
     	Range.expand(null, 10, 10);
     }
     @Test
-    public void testExpandMutation333() {
+    public void testExpandMutationZeroWidthExpandByZero() {
     	assertEquals("The range 0,0 expanded by 0% is still 0,0",
 		exampleRangeZero, Range.expand(exampleRangeZero, 0, 0));
     }
     
     // tests for shift Mutations
     @Test(expected = IllegalArgumentException.class)
-    public void testShiftMutation368() {
+    public void testShiftMutationNullRange() {
     	Range.shift(null, 10);
     }
     
     //test for shiftWithNonZeroCrossing mutations
     @Test
-    public void testShiftWithNonZeroCrossingMutation390() {
+    public void testShiftWithNonZeroCrossingMutation() {
     	Range newRange = new Range(-10,-10);
-    	assertEquals("A shift of 0 will not change the range",
+    	assertEquals("A shift of =10 to 0,0 will yield a range -10,-10",
     	newRange,Range.shift(exampleRangeZero, -10, false));
     }
     
     // test for scale mutations
     @Test(expected = IllegalArgumentException.class)
-    public void testScaleMutation412() {
+    public void testScaleMutationNullRange() {
     	Range.scale(null, 10);
     }
     @Test
-    public void testScaleMutation413() {
+    public void testScaleMutationScaleZeroRangeByZero() {
     	Range newRange = new Range(0,0);
-    	assertEquals("A shift of 0 will not change the range",
+    	assertEquals("Scaling 0,0 by zero will not change the range",
     	newRange,Range.scale(exampleRangeZero, 0));
     }
     
     // tests for hashCode()
-    @Test()
+    @Test
     public void testHashCode() {
     	assertEquals("The range -10, 10 has a hashCode 70778880",
 		70778880, exampleRange.hashCode());
     	System.out.println(exampleRange.hashCode());
     }
+    
+    @Test
+    public void testContainsMutantNotAlterRange() {
+    	exampleRange.contains(0);
+    	assertFalse("Calling contains twice does not alter the range",
+		exampleRange.contains(11));
+    }
+    
+    @Test
+    public void testIntersectsMutantNotAlterRangeLowerBoundContained() {
+    	exampleRange.intersects(-10,-9);
+    	assertTrue("The range -10,-9 intersects the range 10,10",
+    	exampleRange.intersects(-10,-9));
+    }
+    
+    @Test
+    public void testIntersectsMutantNotAlterRangeLowerBound() {
+    	exampleRange.intersects(-15,5);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range interseccts function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    @Test
+    public void testIntersectsMutantNotAlterRangeUpperBound() {
+    	exampleRange.intersects(5,15);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range intersects function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    
+    @Test
+    public void testConstrainMutantNotAlterRangePositive() {
+    	exampleRange.constrain(15);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range constrain function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    @Test
+    public void testConstrainMutantNotAlterRangeNegative() {
+    	exampleRange.constrain(-15);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range constrain function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    
+    @Test
+    public void testContainsMutationNotAlterRange() {
+    	exampleRange.contains(0);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range contains function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    
+    @Test
+    public void testGetCentralValueMutationNotAlterRange() {
+    	exampleRange.getCentralValue();
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range getcentralvalue function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    
+    @Test
+    public void testEqualsMutationNotAlterRange() {
+    	Range newRange = new Range(-10,10);
+    	exampleRange.equals(newRange);
+    	assertTrue("The equals function does not alter the range",
+		exampleRange.equals(newRange));
+    }
+    
+    @Test
+    public void testHashCodeMutationNotAlterRange() {
+    	Range newRange = new Range(-10,10);
+    	exampleRange.hashCode();
+    	assertTrue("The hashCode function does not alter the range",
+		exampleRange.equals(newRange));
+    }
+
+           
     @After
     public void tearDown() throws Exception {
     }
