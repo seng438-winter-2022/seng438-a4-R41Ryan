@@ -1,4 +1,4 @@
-package org.jfree.data.test;
+package org.jfree.data.test.old;
 
 import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.*;
 
