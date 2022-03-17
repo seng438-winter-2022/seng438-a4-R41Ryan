@@ -649,12 +649,90 @@ public class RangeTest {
     }
     
     // tests for hashCode()
-    @Test()
+    @Test
     public void testHashCode() {
     	assertEquals("The range -10, 10 has a hashCode 70778880",
 		70778880, exampleRange.hashCode());
     	System.out.println(exampleRange.hashCode());
     }
+    
+    @Test
+    public void testContainsMutant144() {
+    	exampleRange.contains(0);
+    	assertFalse("Calling contains twice does not alter the range",
+		exampleRange.contains(11));
+    }
+    
+    @Test
+    public void testIntersectsMutant157() {
+    	exampleRange.intersects(-10,-9);
+    	assertTrue("The range -10,-9 intersects the range 10,10",
+    	exampleRange.intersects(-10,-9));
+    }
+    
+    @Test
+    public void testIntersectsMutant158_1() {
+    	exampleRange.intersects(-15,5);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range interseccts function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    @Test
+    public void testIntersectsMutant161() {
+    	exampleRange.intersects(5,15);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range intersects function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    
+    @Test
+    public void testConstrainMutant191() {
+    	exampleRange.constrain(15);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range constrain function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    @Test
+    public void testConstrainMutant193() {
+    	exampleRange.constrain(-15);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range constrain function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    
+    @Test
+    public void testContainsMutation144() {
+    	exampleRange.contains(0);
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range contains function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    
+    @Test
+    public void testGetCentralValueMutation132() {
+    	exampleRange.getCentralValue();
+    	Range newRange = new Range(-10,10);
+    	assertEquals("The range getcentralvalue function does not alter the range 10,10",
+    	newRange,exampleRange);
+    }
+    
+    @Test
+    public void testEqualsMutation() {
+    	Range newRange = new Range(-10,10);
+    	exampleRange.equals(newRange);
+    	assertTrue("The equals function does not alter the range",
+		exampleRange.equals(newRange));
+    }
+    
+    @Test
+    public void testHashCodeMutation() {
+    	Range newRange = new Range(-10,10);
+    	exampleRange.hashCode();
+    	assertTrue("The hashCode function does not alter the range",
+		exampleRange.equals(newRange));
+    }
+
+           
     @After
     public void tearDown() throws Exception {
     }
