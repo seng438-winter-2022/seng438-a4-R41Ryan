@@ -1,0 +1,449 @@
+{
+  "id": "fee681f3-ee77-4f1b-8d50-bf65d1592c82",
+  "version": "2.0",
+  "name": "Best Buy And Walmart",
+  "url": "https://www.bestbuy.ca/",
+  "tests": [{
+    "id": "7a403a28-9ff8-4252-81d1-25fc19628fda",
+    "name": "BestBuyLoginValid",
+    "commands": [{
+      "id": "4368477e-52f7-4432-a463-007c0f66b938",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c1f0c6d-4285-479c-beb9-f2e25297dc85",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ef6371b-892e-4ced-9eb9-71695c320858",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.accountIcon_1jvGP",
+      "targets": [
+        ["css=.accountIcon_1jvGP", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b420a01c-a3c6-4407-bc7a-a8b5d8b7f3b1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.accountIcon_1jvGP",
+      "targets": [
+        ["css=.accountIcon_1jvGP", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b109329-6890-44cc-a7b8-4c8927d72cc7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.accountLabel_2-flX",
+      "targets": [
+        ["css=.accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1e66ce5-8c7b-4662-a6b2-72f88717cb1d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.accountLabel_2-flX",
+      "targets": [
+        ["css=.accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "995a53ae-6fb6-4678-98bb-6e353f9e1914",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.page-title > span",
+      "targets": [
+        ["css=.page-title > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": "Sign In"
+    }, {
+      "id": "07c2470e-e5b0-40bf-8dd2-4cba764c6b9e",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='signIn']/fieldset/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1d0bdc7-c454-4f33-9683-9d750145ccf0",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='signIn']/fieldset/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jonaswong2@gmail.com"
+    }, {
+      "id": "ab4059fd-2a64-463d-a9e4-fad5d9efb96a",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='signIn']/fieldset/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Password1."
+    }, {
+      "id": "301552a2-26bb-4ebd-9c5a-759f4aa2bf38",
+      "comment": "",
+      "command": "click",
+      "target": "css=.GSYpm",
+      "targets": [
+        ["css=.GSYpm", "css:finder"],
+        ["xpath=//form[@id='signIn']/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2788cf3e-05b6-446b-b754-3e846522de28",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.\\_1_Zcv > span",
+      "targets": [
+        ["css=.\\_1_Zcv > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/section/div/h2/span", "xpath:idRelative"],
+        ["xpath=//h2/span", "xpath:position"]
+      ],
+      "value": "Hi, Jonas!"
+    }]
+  }, {
+    "id": "ffa2b5ab-a26b-424b-a523-e9f39e887b9e",
+    "name": "BestBuyLoginInvalid",
+    "commands": [{
+      "id": "d9b4025d-264f-4da0-a034-c8b94ce07519",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03c9de17-707a-4245-8523-e82172f7d3d2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cce4b469-897e-493f-8045-c8457dfed380",
+      "comment": "",
+      "command": "click",
+      "target": "css=.signInOutNavContainer_2mwkw .accountLabel_2-flX",
+      "targets": [
+        ["css=.signInOutNavContainer_2mwkw .accountLabel_2-flX", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1f6f65a-a26c-44ea-86e4-1ce1141b3329",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='signIn']/fieldset/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "invalidemail@email.com"
+    }, {
+      "id": "3eb21f5a-fb5d-4c5c-91df-7cae271bbcc4",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='signIn']/fieldset/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "randompassword"
+    }, {
+      "id": "787a1721-29ba-45ee-8548-f795196c9953",
+      "comment": "",
+      "command": "click",
+      "target": "css=.GSYpm > span",
+      "targets": [
+        ["css=.GSYpm > span", "css:finder"],
+        ["xpath=//form[@id='signIn']/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f00ff251-f3a4-47cf-bec5-7c3688fc3c64",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.mWZ7T > p",
+      "targets": [
+        ["css=.mWZ7T > p", "css:finder"],
+        ["xpath=//div[@id='x-SignIn']/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Sorry, the e-mail address and password you entered don’t match. Please try again.')]", "xpath:innerText"]
+      ],
+      "value": "Sorry, the e-mail address and password you entered don’t match. Please try again."
+    }]
+  }, {
+    "id": "03a18297-502c-40e1-85f2-3b0e3ed0d609",
+    "name": "WalmartDropdownDepartmentsAppliancesMicrowaves",
+    "commands": [{
+      "id": "73179b6c-ff26-472d-896b-58af1a28039c",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.walmart.ca/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1476d2df-f9d6-444e-85c6-0be066b2f151",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "434998fd-7807-4970-a4d5-cc825cc282b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mobile-hamburger-button use",
+      "targets": [
+        ["css=#mobile-hamburger-button use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a213a113-1a53-4ee6-9129-d0026d19cec0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#shopDepartment .css-tuk91g",
+      "targets": [
+        ["css=#shopDepartment .css-tuk91g", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecf85952-35a0-45de-80f2-c5e562722371",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\/browse\\/appliances\\/10018\\?icid\\=Appliances_Flyout_L1Appliances > .css-1wdx3pt",
+      "targets": [
+        ["css=#\\/browse\\/appliances\\/10018\\?icid\\=Appliances_Flyout_L1Appliances > .css-1wdx3pt", "css:finder"],
+        ["xpath=//a[@id='/browse/appliances/10018?icid=Appliances_Flyout_L1Appliances']/li", "xpath:idRelative"],
+        ["xpath=//ul/div/div/a/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Appliances')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28ac3f1c-2595-4571-85f2-2d164d96d1c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\/browse\\/appliances\\/small-appliances\\/10018-21074\\?icid\\=Appliances_Flyout_L2SmallApp div",
+      "targets": [
+        ["css=#\\/browse\\/appliances\\/small-appliances\\/10018-21074\\?icid\\=Appliances_Flyout_L2SmallApp div", "css:finder"],
+        ["xpath=//a[@id='/browse/appliances/small-appliances/10018-21074?icid=Appliances_Flyout_L2SmallApp']/li/span/div", "xpath:idRelative"],
+        ["xpath=//div[4]/nav/ul/div[2]/div/a/li/span/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e7e5928-e454-4f04-a028-d635d58ee9b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\/browse\\/appliances\\/small-appliances\\/microwaves\\/10018-21074-32683\\?icid\\=Appliances_Flyout_Microwaves > .css-1wdx3pt",
+      "targets": [
+        ["css=#\\/browse\\/appliances\\/small-appliances\\/microwaves\\/10018-21074-32683\\?icid\\=Appliances_Flyout_Microwaves > .css-1wdx3pt", "css:finder"],
+        ["xpath=//a[@id='/browse/appliances/small-appliances/microwaves/10018-21074-32683?icid=Appliances_Flyout_Microwaves']/li", "xpath:idRelative"],
+        ["xpath=//div[5]/nav/ul/div[4]/div/a/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Microwaves')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82568b1b-3cac-477f-96ab-9f840580338f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.ekiwotq0",
+      "targets": [
+        ["css=.ekiwotq0", "css:finder"],
+        ["xpath=//div[@id='browse-page']/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Microwaves')]", "xpath:innerText"]
+      ],
+      "value": "Microwaves"
+    }, {
+      "id": "f7451f68-6d2b-4d5b-a292-b4e9fee156de",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-bi43us > .css-1qb8rtc",
+      "targets": [
+        ["css=.css-bi43us > .css-1qb8rtc", "css:finder"],
+        ["xpath=//div[@id='seoHeaderText']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Find a wide selection of microwaves and microwave ovens that are essential for every kitchen."
+    }]
+  }, {
+    "id": "6b62bc03-623d-4208-b952-6d70b3a07155",
+    "name": "WalmartDropdownDepartmentsElectronicsUnlockedCellphones",
+    "commands": [{
+      "id": "25c90343-8343-4119-9e94-efd8a10ac295",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.walmart.ca/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92dfce45-3b97-42c4-8ace-21f238a88096",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7145d53d-fd63-436e-85c0-87cd7de6cc05",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mobile-hamburger-button > svg",
+      "targets": [
+        ["css=#mobile-hamburger-button > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1bf90ee-ca91-4709-bbca-c3c56b7c6ad1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#shopDepartment div:nth-child(2)",
+      "targets": [
+        ["css=#shopDepartment div:nth-child(2)", "css:finder"],
+        ["xpath=//a[@id='shopDepartment']/li/span/div[2]", "xpath:idRelative"],
+        ["xpath=//span/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aec90fe1-db18-4204-9eac-59391a28c323",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#\\/browse\\/outdoor-living\\/patio-furniture\\/10009-31116\\?icid\\=homepage_HP_TopCategory_Patio_WM > .css-1wdx3pt",
+      "targets": [
+        ["css=#\\/browse\\/outdoor-living\\/patio-furniture\\/10009-31116\\?icid\\=homepage_HP_TopCategory_Patio_WM > .css-1wdx3pt", "css:finder"],
+        ["xpath=//a[@id='/browse/outdoor-living/patio-furniture/10009-31116?icid=homepage_HP_TopCategory_Patio_WM']/li", "xpath:idRelative"],
+        ["xpath=//ul/div/a/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Patio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f1e7ac3-0d5d-4334-afd1-4a0f2568848e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#\\/browse\\/outdoor-living\\/patio-furniture\\/10009-31116\\?icid\\=homepage_HP_TopCategory_Patio_WM > .css-1wdx3pt",
+      "targets": [
+        ["css=#\\/browse\\/outdoor-living\\/patio-furniture\\/10009-31116\\?icid\\=homepage_HP_TopCategory_Patio_WM > .css-1wdx3pt", "css:finder"],
+        ["xpath=//a[@id='/browse/outdoor-living/patio-furniture/10009-31116?icid=homepage_HP_TopCategory_Patio_WM']/li", "xpath:idRelative"],
+        ["xpath=//ul/div/a/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Patio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33bf8454-26e2-42b7-8228-7441de6cb5b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\/browse\\/electronics\\/10003 > .css-1wdx3pt",
+      "targets": [
+        ["css=#\\/browse\\/electronics\\/10003 > .css-1wdx3pt", "css:finder"],
+        ["xpath=//a[@id='/browse/electronics/10003']/li", "xpath:idRelative"],
+        ["xpath=//div[5]/div/a/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Electronics')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cdcd676-f18a-42ac-8eca-4e0709772e42",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\/browse\\/electronics\\/cell-phones\\/10003-20135 > .css-1wdx3pt",
+      "targets": [
+        ["css=#\\/browse\\/electronics\\/cell-phones\\/10003-20135 > .css-1wdx3pt", "css:finder"],
+        ["xpath=//a[@id='/browse/electronics/cell-phones/10003-20135']/li", "xpath:idRelative"],
+        ["xpath=//div[4]/nav/ul/div[5]/div/a/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Cell Phones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "944c5b19-f8bc-4c14-8c42-bc0d09e146dc",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\/browse\\/electronics\\/cell-phones\\/unlocked-phones\\/10003-20135-33218 div",
+      "targets": [
+        ["css=#\\/browse\\/electronics\\/cell-phones\\/unlocked-phones\\/10003-20135-33218 div", "css:finder"],
+        ["xpath=//a[@id='/browse/electronics/cell-phones/unlocked-phones/10003-20135-33218']/li/span/div", "xpath:idRelative"],
+        ["xpath=//div[5]/nav/ul/div/div/a/li/span/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec65dd1d-262c-47f9-a589-8cbfd1dda782",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.ekiwotq0",
+      "targets": [
+        ["css=.ekiwotq0", "css:finder"],
+        ["xpath=//div[@id='browse-page']/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Unlocked Phones & Cellphones')]", "xpath:innerText"]
+      ],
+      "value": "Unlocked Phones & Cellphones"
+    }, {
+      "id": "70f6d9ee-2ec8-4229-b7d3-9af72d296250",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#tileZone1 p",
+      "targets": [
+        ["css=#tileZone1 p", "css:finder"],
+        ["xpath=//div[@id='tileZone1']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Unlocked phones are not tied to a specific carrier network. This gives you the flexibility to customize your phone service to suit your needs.')]", "xpath:innerText"]
+      ],
+      "value": "Unlocked phones are not tied to a specific carrier network. This gives you the flexibility to customize your phone service to suit your needs."
+    }]
+  }],
+  "suites": [{
+    "id": "228a855f-e7da-4fbc-8667-ef9adabc4601",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.bestbuy.ca/", "https://www.walmart.ca/en"],
+  "plugins": []
+}

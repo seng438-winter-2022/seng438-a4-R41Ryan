@@ -1,18 +1,14 @@
 package org.jfree.data.test;
 
 import static org.junit.Assert.*;
-
-import java.io.Serializable;
-
 import org.junit.*;
 import org.jfree.data.*;
 import org.jmock.*;
 import org.jmock.Expectations;
-import org.jmock.lib.legacy.ClassImposteriser;
 
 import org.junit.Test;
 
-public class DataUtilitiesTest {
+public class DataUtilitiesTestOld {
 	Mockery mockingContext;
 
 	    @Before
@@ -283,12 +279,6 @@ public class DataUtilitiesTest {
 			double results = DataUtilities.calculateRowTotal(values, 0, validColumns);
 			assertEquals(results, 1, 0.0000001d);
 		}
-	   	 
-	   	@Test(expected = IllegalArgumentException.class)
-	   	// This tests to see if null input for the data is allowed. It should not.
-	   	public void testCalculateRowNullInput() {
-			double results = DataUtilities.calculateRowTotal(null, 0);
-	   	}
 	    
 	    @Test
 	    //This test is for checking if two equal arrays are equal.
@@ -798,145 +788,5 @@ public class DataUtilitiesTest {
 		assertEquals(result[1][0].doubleValue(), 5.4, 0.0000001d);
 		assertEquals(result[2][0].doubleValue(), 0.001, 0.0000001d);
 		assertEquals(result[2][1].doubleValue(), 8.20, 0.0000001d);
-	}
-	
-	// New Mutation Testing Test Cases
-	@Test(expected = IllegalArgumentException.class)
-	//Tests the clone method with a null input
-	// ****************************** NEW **********************************
-	public void testNullInputClone() {
-		double[][] clone = DataUtilities.clone(null);
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	// This tests to see if an exception is thrown when the method is given a null parameter, which is not permitted, 
-	// along with a parameter for valid rows
-	// ****************************** NEW **********************************
-	public void testCalculateColumnNullParameterWithValidRows() {
-		double results = DataUtilities.calculateColumnTotal(null, 0, null);
-	}
-	
-	@Test
-	// This tests to see if it will still count the row that is equal to rowCount. It should not.
-	// ****************************** NEW **********************************
-	public void testCalculateColumnValidRowEqualToRowCount() {
-		Mockery context = new Mockery();
-		final Values2D values = context.mock(Values2D.class);
-		context.checking(new org.jmock.Expectations() {
-			{
-				allowing(values).getRowCount();
-				will(returnValue(2));
-				allowing(values).getValue(2, 0);
-				will(returnValue(2));
-			}
-		});
-		int[] validRows = {2};
-		double results = DataUtilities.calculateColumnTotal(values, 0, validRows);
-		assertEquals(results, 0, 0.000001d);
-	}
-	
-	@Test
-	// This tests to see if a null value in the column is counted for the overloaded function. It shouldn't.
-	// ****************************** NEW **********************************
-	public void testCalculateColumnWithOneNullValue() {
-		Mockery context = new Mockery();
-		final Values2D values = context.mock(Values2D.class);
-		context.checking(new org.jmock.Expectations() {
-			{
-				allowing(values).getRowCount();
-				will(returnValue(3));
-				allowing(values).getValue(0, 0);
-				will(returnValue(null));
-				allowing(values).getValue(1, 0);
-				will(returnValue(2.5));
-				allowing(values).getValue(2, 0);
-				will(returnValue(5.5));
-			}
-		});
-		int[] validRows = {0, 1, 2};
-		double results = DataUtilities.calculateColumnTotal(values, 0, validRows);
-		assertEquals(results, 8.0, 0.000001d);
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	// This tests to see if a null input for calculateRowTotal is allowed. It shouldn't.
-	// ****************************** NEW **********************************
-	public void testCalculateRowTotalWithNullInput() {
-		double results = DataUtilities.calculateRowTotal(null, 0);
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	// This tests to see if a null input for the overloaded calculateRowTotal is allowed. It shouldn't.
-	// ****************************** NEW **********************************
-	public void testCalculateRowTotalValidColumnsWithNullInput() {
-		double results = DataUtilities.calculateRowTotal(null, 0, null);
-	}
-	
-	@Test
-	// This tests to see if it will still count the column that is equal to colCount. It should not.
-	// ****************************** NEW **********************************
-	public void testCalculateRowValidRowEqualToColCount() {
-		Mockery context = new Mockery();
-		final Values2D values = context.mock(Values2D.class);
-		context.checking(new org.jmock.Expectations() {
-			{
-				allowing(values).getColumnCount();
-				will(returnValue(2));
-				allowing(values).getValue(0, 2);
-				will(returnValue(2));
-			}
-		});
-		int[] validCols = {2};
-		double results = DataUtilities.calculateRowTotal(values, 0, validCols);
-		assertEquals(results, 0, 0.000001d);
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	// This tests to see if a null input for the createNumberArray2D is allowed. It shouldn't.
-	// ****************************** NEW **********************************
-	public void testCreateNumberArray2DWithNullInput() {
-		Number[][] results = DataUtilities.createNumberArray2D(null);
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	// This tests to see if a null input for the getCumulativePercentages is allowed. It shouldn't.
-	// ****************************** NEW **********************************
-	public void testGetCumulativePercentagesWithNullInput() {
-		KeyedValues results = DataUtilities.getCumulativePercentages(null);
-	}
-	
-	@Test
-	// This tests if there is a single null value for getCumulativePercentages.
-	public void testGetCumulativePercentagesWithOneNull() {
-		Mockery context = new Mockery();
-		final KeyedValues values = context.mock(KeyedValues.class);
-		context.checking(new org.jmock.Expectations() {
-			{
-				allowing(values).getItemCount();
-				will(returnValue(3));
-				allowing(values).getKey(0);
-				will(returnValue("2010 Plagiarism Incidents"));
-				allowing(values).getKey(1);
-				will(returnValue("2011 Plagiarism Incidents"));
-				allowing(values).getKey(2);
-				will(returnValue("2012 Plagiarism Incidents"));
-				allowing(values).getIndex("2010 Plagiarism Incidents");
-				will(returnValue(0));
-				allowing(values).getIndex("2011 Plagiarism Incidents");
-				will(returnValue(1));
-				allowing(values).getIndex("2012 Plagiarism Incidents");
-				will(returnValue(2));
-				allowing(values).getValue(0);
-				will(returnValue(10));
-				allowing(values).getValue(1);
-				will(returnValue(null));
-				allowing(values).getValue(2);
-				will(returnValue(5));
-			}
-		});
-		KeyedValues results = DataUtilities.getCumulativePercentages(values);
-		assertEquals(results.getValue(0).doubleValue(), 0.66, 0.01d);
-		assertEquals(results.getValue(1).doubleValue(), 0.66, 0.01d);
-		assertEquals(results.getValue(2).doubleValue(), 1.0, 0.01d);
 	}
 }

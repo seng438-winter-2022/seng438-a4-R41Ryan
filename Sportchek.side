@@ -1,0 +1,458 @@
+{
+  "id": "7f25da98-7981-439e-b8da-94d3ab109adb",
+  "version": "2.0",
+  "name": "Sportchek",
+  "url": "https://www.sportchek.ca",
+  "tests": [{
+    "id": "146d65fe-1dcc-4060-848b-68cf99351a77",
+    "name": "SearchShoes",
+    "commands": [{
+      "id": "a6a14c96-5b67-488c-8514-94f80ef060cb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c7efa37-d77d-4068-8f95-70950e840bc9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10bc556f-6894-4859-8d54-07371e674c94",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdade351-6e4f-4fec-bb47-93f3f25e5976",
+      "comment": "",
+      "command": "type",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Shoes"
+    }, {
+      "id": "172684af-90f1-46b9-bf15-26a1876d7086",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__submit",
+      "targets": [
+        ["css=.header-search__submit", "css:finder"],
+        ["xpath=//input[@value='SEARCH']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad76a44e-23e7-4d30-b9e3-162cb4d15a87",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=global-page-header__title",
+      "targets": [
+        ["id=global-page-header__title", "id"],
+        ["css=#global-page-header__title", "css:finder"],
+        ["xpath=//h1[@id='global-page-header__title']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div/div/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": "SHOES, BOOTS, SANDALS & CLEATS"
+    }]
+  }, {
+    "id": "57c7057e-221f-4271-bfe1-1f2d096ec038",
+    "name": "SearchNoResult",
+    "commands": [{
+      "id": "192baf20-9916-49c5-abdc-fd286fe57c7f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42d7f2c2-0fa9-47e8-8347-b967e6d07c4e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b23fe8d1-8eb1-45ec-ba2f-42fd77aaf516",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e3e2547-9832-4bfe-b09b-a2a31c864480",
+      "comment": "",
+      "command": "type",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "randominputnoresult"
+    }, {
+      "id": "743a37ea-6bd3-45f8-99ee-db81c031659e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__submit",
+      "targets": [
+        ["css=.header-search__submit", "css:finder"],
+        ["xpath=//input[@value='SEARCH']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "479239c8-be16-462b-ad94-dd7f4a1b0f6a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.no-results__headline",
+      "targets": [
+        ["css=.no-results__headline", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/div[3]/div[2]/div/ul/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"]
+      ],
+      "value": "NO RESULTS FOUND\\nPLEASE TRY ANOTHER SEARCH"
+    }]
+  }, {
+    "id": "a12b6efe-d04a-4061-a329-ead952170487",
+    "name": "SearchWaterBottles",
+    "commands": [{
+      "id": "c440d048-9cfe-464f-a638-df6ccb2ba23f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22af02d5-7e7d-435e-be22-3be90a5e5834",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "883f4058-95e1-4442-b43d-9b3be1ea46fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3b0f9c9-f04d-44ca-a64d-3df7f75d3b38",
+      "comment": "",
+      "command": "type",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Water bottle"
+    }, {
+      "id": "b467892b-0d6f-4e77-af11-41d128ba1d12",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__submit",
+      "targets": [
+        ["css=.header-search__submit", "css:finder"],
+        ["xpath=//input[@value='SEARCH']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc54b5b6-0687-4785-9a70-cbfccc8c8a75",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=headerPickupStoreTitle",
+      "targets": [
+        ["id=headerPickupStoreTitle", "id"],
+        ["css=#headerPickupStoreTitle", "css:finder"],
+        ["xpath=//span[@id='headerPickupStoreTitle']", "xpath:attributes"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Your Store:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da7b5fbe-1891-4a36-8d1b-ae050049adff",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=global-page-header__title",
+      "targets": [],
+      "value": "WATER BOTTLES & HYDRATION"
+    }, {
+      "id": "f07b918a-f538-4073-aa95-2a6e60b12e6c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=span:nth-child(2) > .page-breadcrumb__link > span",
+      "targets": [],
+      "value": "Wellness"
+    }]
+  }, {
+    "id": "cbf8a95f-45a3-4b11-9573-3f10acbb413f",
+    "name": "DropdownMenWinterJacket",
+    "commands": [{
+      "id": "ae5c4451-5bff-445f-8b50-1d23e4c5c477",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd2b0ba9-68c9-405b-9f76-6804f0be6a9f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e504ca78-b645-4c75-8d25-6a43a437be9f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Men",
+      "targets": [
+        ["linkText=Men", "linkText"],
+        ["css=.page-nav__item:nth-child(4) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, 'categories/men')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6fe4eb9-a80a-4f22-99aa-a3e8960bd2b3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Winter Jackets",
+      "targets": [
+        ["linkText=Winter Jackets", "linkText"],
+        ["css=.page-nav__section:nth-child(2) .page-nav__item:nth-child(1) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Winter Jackets')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/categories/men/jackets-coats-vests/winter-jackets.html')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Winter Jackets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "806c9a00-1f39-465a-b71f-e504c1ea1ac3",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=global-page-header__title",
+      "targets": [
+        ["id=global-page-header__title", "id"],
+        ["css=#global-page-header__title", "css:finder"],
+        ["xpath=//h1[@id='global-page-header__title']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": "MEN'S WINTER JACKETS & COATS"
+    }]
+  }, {
+    "id": "a558c891-ab79-4b29-82b2-7fda28058ccd",
+    "name": "DropdownMenHoodies",
+    "commands": [{
+      "id": "7fcb0ade-16ad-45f7-b936-aa6efcf96cb3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e4b8d53-2db7-4053-9f60-049bf9d61f07",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15ce7006-4738-4875-8c09-0b30a19f5899",
+      "comment": "",
+      "command": "click",
+      "target": "css=.page-nav__item:nth-child(4) .main-menu__text",
+      "targets": [
+        ["css=.page-nav__item:nth-child(4) .main-menu__text", "css:finder"],
+        ["xpath=//li[4]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Men')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54ca8033-1009-4b4b-850b-00067cedd3c7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Hoodies",
+      "targets": [
+        ["linkText=Hoodies", "linkText"],
+        ["css=.page-nav__section:nth-child(4) .page-nav__item:nth-child(1) > .page-nav__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Hoodies')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/categories/men/tops/hoodies.html')]", "xpath:href"],
+        ["xpath=//div/div/div[4]/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6049b7f7-c5ad-49ec-b40a-460065f625d3",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=global-page-header__title",
+      "targets": [
+        ["id=global-page-header__title", "id"],
+        ["css=#global-page-header__title", "css:finder"],
+        ["xpath=//h1[@id='global-page-header__title']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": "MEN'S HOODIES"
+    }, {
+      "id": "37b6043b-9b17-44ae-83bc-4f7c3efb0d7c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Women",
+      "targets": [
+        ["linkText=Women", "linkText"],
+        ["css=.page-nav__item:nth-child(3) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, '/categories/women')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Women')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "648b03b0-b287-4274-af67-590730e72208",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Women",
+      "targets": [
+        ["linkText=Women", "linkText"],
+        ["css=.page-nav__item:nth-child(3) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, '/categories/women')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Women')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d796522-bd84-40e4-b168-fb4680d1989a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Women",
+      "targets": [
+        ["linkText=Women", "linkText"],
+        ["css=.page-nav__link_active", "css:finder"],
+        ["xpath=//a[contains(@href, '/categories/women')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Women')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "24d8aa93-c9bd-4919-8713-68d952073744",
+    "name": "DropdownWomenBoots",
+    "commands": [{
+      "id": "9f786878-330f-4175-b076-30e16b5e1453",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f47032f-1bf6-4569-9a8d-d5d3258342da",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "882fde07-92f6-47b2-94b3-6b0fa71f61a8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Women",
+      "targets": [
+        ["linkText=Women", "linkText"],
+        ["css=.page-nav__item:nth-child(3) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, 'categories/women')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Women')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76cffa1a-2529-4f9c-bb23-6c0614dbc7c4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Training",
+      "targets": [
+        ["linkText=Training", "linkText"],
+        ["css=.page-nav__section:nth-child(1) .page-nav__item:nth-child(2) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Training')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/categories/women/footwear/training-shoes.html')]", "xpath:href"],
+        ["xpath=//div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Training')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86e93f7d-e418-4398-8237-8b102a0babdb",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Training",
+      "targets": [
+        ["linkText=Training", "linkText"],
+        ["css=.page-nav__section:nth-child(1) .page-nav__item:nth-child(2) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Training')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/categories/women/footwear/training-shoes.html')]", "xpath:href"],
+        ["xpath=//div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Training')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53c8c172-27c3-46bb-81d1-02d17c215adf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Boots",
+      "targets": [
+        ["linkText=Boots", "linkText"],
+        ["css=.page-nav__section:nth-child(1) .page-nav__item:nth-child(4) > .page-nav__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Boots')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/categories/women/footwear/boots.html')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b629c00-8110-462c-b059-1df7258a295e",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=global-page-header__title",
+      "targets": [
+        ["id=global-page-header__title", "id"],
+        ["css=#global-page-header__title", "css:finder"],
+        ["xpath=//h1[@id='global-page-header__title']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": "WOMEN'S BOOTS"
+    }]
+  }],
+  "suites": [{
+    "id": "c28b8e6a-0ac2-4fdb-ac49-54816b96420b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.sportchek.ca/", "https://www.sportchek.ca/categories/shoes/mens-athletic-shoes-cleats/running-shoes.html"],
+  "plugins": []
+}
