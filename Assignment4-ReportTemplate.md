@@ -10,7 +10,10 @@
 |                 |  Ryan Huynh|
 
 # Introduction
+In this lab we used the test suite developed over the two previous labs to perform mutation testing on the classes Range and DataUtilies.
+This was done with the PITclipse plugin for Eclipse to generate mutations within the two aforementioned classes. We then developed additional tests in order to increase the mutation score where possible. 
 
+Additionally, we used Selenium IDE to test a few web page GUIs. We used Selenium to automate test cases for a few different functionalities of the system. Any defects found using these tests were then documented.
 
 # Analysis of 10 Mutants of the Range class 
 
