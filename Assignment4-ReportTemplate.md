@@ -79,17 +79,19 @@ Likewise the results for the updated test suite are found here: [New Tests](http
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
-# Explain your SELENUIM test case design process
-
+# Explain your SELENIUM test case design process
+Our design process for the test cases was fairly simple. We each chose two different functionalities that we wrote test cases for. During the test writing process we discovered that some functionalities only required a single test case to fully test, so we decided to expand on our existing tests of other functionalities. We also decided to test all three websites to expand our test suite.
 # Explain the use of assertions and checkpoints
-
-# how did you test each functionaity with different test data
+All of our tests use assertions to ensure that the website is displaying the correct information. All of our tests used the assertText assertion, as it was the simplest way to ensure that the website was displaying correctly. We did not use checkpoints in our test cases.
+# how did you test each functionality with different test data
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+We used the selenium IDE in order to do most of our testing. The selenium IDE allows us to do the testing directly on the web browser which made the testing process much easier and assertions were done in this way too. With Sikulix, tests are made through a more programmatic fashion which makes it slightly less efficient and more difficult to make tests. Though Sikulix allows for taking screenshots to create the tests, Selenium is still faster to use as it directly listens to clicks and button presses to make the tests.
 
 # How the team work/effort was divided and managed
-
+For the mutation testing two of us wrote tests for DataUtilities and two of us wrote tests for Range. For the GUI testing, we each chose two functionalities to test, however some of the functionalities were fairly easy to test so the people with those functionalities wrote additional tests for other functionalities to improve our test suite.
 
 # Difficulties encountered, challenges overcome, and lessons learned
+For Selenium testing, the website will sometimes change as it is updated, breaking the previous tests that were created which proved to be slightly problematic. We also learned that Selenium is extremely easy to use and can quickly create test cases without much headache for a GUI.
 
 # Comments/feedback on the lab itself
