@@ -63,9 +63,6 @@ expandToInclude() - negated conditional
 * Likewise if the range was null then the following conditionals will fail and cause errors as well
 * Killed by most tests, such as: testExpandToIncludeValueInRange()
 
-
-# Report all the statistics and the mutation score for each test class
-
 # Report all the statistics and the mutation score for each test class
 
 The PIT mitation testing results can be found in the following HTML summary page: [Old Tests](https://htmlpreview.github.io/?https://github.com/seng438-winter-2022/seng438-a4-R41Ryan/blob/main/MutationTests(OLD)/org.jfree.data/index.html)
@@ -83,8 +80,17 @@ Overall I would say both the Range and DataUtilities tests were quite effective 
 
 Equivalent mutants tend to decrease mutation score as they cannot be properly killed, this means that the final test score tends to underrepresent the actual score. Several of the mutants, such as those that increment a local variable that is only ever used once in the function or similarly mutates on it's final use. LIkewise, mutants that alter the conditions if statements (ex. > to >=) are often handled reduntantly by the function, for example the constrain method calls the contain method to determine if the value being used is in the range or not then comparisons to see if it is > or >= to the upper bound are redundant as the >= was already covered by the contains call.
 
-As for detecting equivalent mutatants, 
+As for detecting equivalent mutants, Although there are a limited amount of mutation operations that can be done, which one would result in an equivalent mutation would depend on what the mutation operation was and what the surrounding context was. In order to find an equivalent mutant, you could apply the following steps:
+* Perform the mutation operation
+* Check to see if the mutant survived
+* If it survived, find where the mutation was made and look at the context (e.g. Is it a conditional in a for loop? A while loop? Or was it done to a single line of code?)
+* Once the mutation is found and the context is identified, look into a pre-coded operation map to determine if the original transformed into the mutation in the context is classified as an equivalent mutation (e.g. The mutation was made in a for loop conditional that increments by +1, where the original was x < 10 and the mutation was x != 10. This would result in an equivalent mutation.)
 
+This assumes that the code of the test case is syntactically correct, so the context is more easily able to be identified.
+
+The advantage of this algorithm is that, if implemented properly, it is very thorough and will detect almost all equivalent mutations.
+
+The major disadvantage of this algorithm is that it is very complex as it is highly dependent on a pre-coded operation map which would require humans that are able to identify all possible mappings of (original LOC, mutation LOC, context) → (Is it equivalent code?).
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
