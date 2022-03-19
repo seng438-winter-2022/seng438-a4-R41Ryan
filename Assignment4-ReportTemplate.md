@@ -121,3 +121,5 @@ For the mutation testing two of us wrote tests for DataUtilities and two of us w
 For Selenium testing, the website will sometimes change as it is updated, breaking the previous tests that were created which proved to be slightly problematic. We also learned that Selenium is extremely easy to use and can quickly create test cases without much headache for a GUI.
 
 # Comments/feedback on the lab itself
+
+One major issue is that in the lab document, the two different methods to install PIT install two different versions of PIT, which each have a different number of mutators included.
