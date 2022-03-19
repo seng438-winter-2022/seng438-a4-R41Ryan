@@ -66,6 +66,9 @@ expandToInclude() - negated conditional
 
 # Report all the statistics and the mutation score for each test class
 
+The PIT mitation testing results can be found in the following HTML summary page: [Old Tests](https://htmlpreview.github.io/?https://github.com/seng438-winter-2022/seng438-a4-R41Ryan/blob/main/MutationTests(OLD)/org.jfree.data/index.html)
+
+Likewise the results for the updated test suite are found here: [New Tests](https://htmlpreview.github.io/?https://github.com/seng438-winter-2022/seng438-a4-R41Ryan/blob/main/MutationTests(New)/org.jfree.data/index.html)
 
 
 # Analysis drawn on the effectiveness of each of the test classes
