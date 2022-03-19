@@ -363,6 +363,7 @@ public class RangeTest {
     	assertTrue("Expects a range from -10 to 100",
 		combinedRange.equals(Range.combine(exampleRangePositive,exampleRange)));
     }
+    
     @Test
     public void testCombineBothNull() {
     	assertNull("If range 2 is null range 1 is returned",
@@ -734,6 +735,44 @@ public class RangeTest {
     	exampleRange.hashCode();
     	assertTrue("The hashCode function does not alter the range",
 		exampleRange.equals(newRange));
+    }
+    
+    @Test
+    public void testCombineMutationPositiveRanges() {
+    	Range newRange = new Range(50,150);
+    	Range combinedRange  = new Range(1,150);
+    	assertEquals("The range 50,150 combined with 1,100 yields 1,150",
+    	combinedRange,Range.combine(newRange, exampleRangePositive));
+	}
+    
+    @Test
+    public void testExpandToIncludeMutationValueNegativeWithinRange() {
+    	Range newRange = new Range (-10,10);
+    	assertEquals("The range -10,10 expanded to include -5 is unchanged",
+		newRange, Range.expandToInclude(exampleRange, -5));
+    }
+    
+    @Test
+    public void testExpandToIncludeMutationValuePositiveWithinRange() {
+    	Range newRange = new Range (-10,10);
+    	assertEquals("The range -10,10 expanded to include 5 is unchanged",
+		newRange, Range.expandToInclude(exampleRange, 5));
+    }
+    
+    @Test
+    public void testShiftNonZeroCrossingMutationCrossBy1() {
+    	Range newRange = new Range(-10,-5.5);
+    	Range shiftedRange = new Range(-4,0);
+    	assertEquals("The range -10,-5.5 shifted by 6 with no zero crossing will be -4,0",
+		shiftedRange,Range.shift(newRange,6,false));
+    }
+    
+    //test for scale
+    @Test(expected = IllegalArgumentException.class)
+    public void testScaleMutationNegativeScaleProperAssert() {
+    	Range newRange = new Range(20,-20);
+    	assertEquals("A scale by -2 will result in a range of 20, -20 if an exception is not thrown",
+    	newRange, Range.scale(exampleRange,-2));
     }
 
            
