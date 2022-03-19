@@ -104,6 +104,9 @@ Below are a few examples of manually finding equivalent mutants. The process use
 Our strategy for increasing the mutation scores of DataUtilities and Range classes was to use the PIT Mutation Summary of the original test suite and design new test cases that would pass as JUnit tests but would specifically kill the mutation that survived in the original test suites.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
+The advantage of mutation testing is that it can help with catching small, obscure, or otherwise subtle bugs and faults that would've gone unnoticed; Bugs such as null inputs, boundary values, special values, etc.
+
+The disadvantage of mutation testing is that, in order to be effective, it must be very thorough, which means that it would take a lot of time to perform. It takes so much time that, when used practically for a large project, it is required to do it automatically with a tool like Pitclipse.
 
 # Explain your SELENIUM test case design process
 Our design process for the test cases was fairly simple. We each chose two different functionalities that we wrote test cases for. During the test writing process we discovered that some functionalities only required a single test case to fully test, so we decided to expand on our existing tests of other functionalities. We also decided to test all three websites to expand our test suite.
