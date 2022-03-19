@@ -112,7 +112,6 @@ The disadvantage of mutation testing is that, in order to be effective, it must 
 Our design process for the test cases was fairly simple. We each chose two different functionalities that we wrote test cases for. During the test writing process we discovered that some functionalities only required a single test case to fully test, so we decided to expand on our existing tests of other functionalities. We also decided to test all three websites to expand our test suite.
 # Explain the use of assertions and checkpoints
 All of our tests use assertions to ensure that the website is displaying the correct information. All of our tests used the assertText assertion, as it was the simplest way to ensure that the website was displaying correctly. We did not use checkpoints in our test cases.
-# how did you test each functionality with different test data
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 We used the selenium IDE in order to do most of our testing. The selenium IDE allows us to do the testing directly on the web browser which made the testing process much easier and assertions were done in this way too. With Sikulix, tests are made through a more programmatic fashion which makes it slightly less efficient and more difficult to make tests. Though Sikulix allows for taking screenshots to create the tests, Selenium is still faster to use as it directly listens to clicks and button presses to make the tests.
