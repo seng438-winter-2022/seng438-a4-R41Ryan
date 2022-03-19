@@ -1,6 +1,6 @@
 # seng438-assignment-4
 
-# Guidline
+# Links
 
-- read [assignment guideline](assignment4.md)
-- commit and push output on **Github** ([assignment report template](./Assignment4-ReportTemplate.md))
+- Final Report [here](Assignment4-Report.md)
+- [Selenium scripts](/SeleniumTests))
