@@ -65,12 +65,12 @@ expandToInclude() - negated conditional
 
 # Report all the statistics and the mutation score for each test class
 
-The PIT mitation testing results can be found in the following HTML summary page: [Old Tests](https://htmlpreview.github.io/?https://github.com/seng438-winter-2022/seng438-a4-R41Ryan/blob/main/MutationTests(OLD)/org.jfree.data/index.html)
+The PIT mitation testing results can be found in the following HTML summary page: [Old Tests](https://htmlpreview.github.io/?https://github.com/seng438-winter-2022/seng438-a4-R41Ryan/blob/main/MutationTests(Old)/org.jfree.data/index.html)
 
 Likewise the results for the updated test suite are found here: [New Tests](https://htmlpreview.github.io/?https://github.com/seng438-winter-2022/seng438-a4-R41Ryan/blob/main/MutationTests(New)/org.jfree.data/index.html)
 
 These are uploaded to the repository in the folders MutationTests(Old) and MutationTests(New) respectively
-Overall our mutations score went from 71% to 82% in range and 89% to 92& in DataUtilities, increases beyond this were slow due to many equivalent mutations.
+Overall our mutations score went from 86% to 82% in range and 93% to 100& in DataUtilities, increases beyond this were slow due to many equivalent mutations.
 
 # Analysis drawn on the effectiveness of each of the test classes
 
