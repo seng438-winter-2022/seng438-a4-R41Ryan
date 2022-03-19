@@ -66,14 +66,25 @@ expandToInclude() - negated conditional
 
 # Report all the statistics and the mutation score for each test class
 
+# Report all the statistics and the mutation score for each test class
+
 The PIT mitation testing results can be found in the following HTML summary page: [Old Tests](https://htmlpreview.github.io/?https://github.com/seng438-winter-2022/seng438-a4-R41Ryan/blob/main/MutationTests(OLD)/org.jfree.data/index.html)
 
 Likewise the results for the updated test suite are found here: [New Tests](https://htmlpreview.github.io/?https://github.com/seng438-winter-2022/seng438-a4-R41Ryan/blob/main/MutationTests(New)/org.jfree.data/index.html)
 
+These are uploaded to the repository in the folders MutationTests(Old) and MutationTests(New) respectively
+Overall our mutations score went from 71% to 82% in range and 89% to 92& in DataUtilities, increases beyond this were slow due to many equivalent mutations.
 
 # Analysis drawn on the effectiveness of each of the test classes
 
+Overall I would say both the Range and DataUtilities tests were quite effective in mutation testing. Most of the remaining mutations that were not killed were either very obscure or equivalent mutations. Both of the original test suites covered most of the mutations and most additions were need to account for behaviour we did not anticipate such as incrementing values (a++) resulting in the class member variables being changed even in methods not meant to alter them.
+
 # A discussion on the effect of equivalent mutants on mutation score accuracy
+
+Equivalent mutants tend to decrease mutation score as they cannot be properly killed, this means that the final test score tends to underrepresent the actual score. Several of the mutants, such as those that increment a local variable that is only ever used once in the function or similarly mutates on it's final use. LIkewise, mutants that alter the conditions if statements (ex. > to >=) are often handled reduntantly by the function, for example the constrain method calls the contain method to determine if the value being used is in the range or not then comparisons to see if it is > or >= to the upper bound are redundant as the >= was already covered by the contains call.
+
+As for detecting equivalent mutatants, 
+
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
