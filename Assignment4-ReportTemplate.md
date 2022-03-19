@@ -94,11 +94,11 @@ The major disadvantage of this algorithm is that it is very complex as it is hig
 
 Below are a few examples of manually finding equivalent mutants. The process used to manually find these equivalent mutants was by randomly performing random mutations, and seeing if the mutant is logically the same as the original in the context of the code surrounding it.
 * calculateColumnTotal() method: replace row < rowCount with row != rowCount (line 155)
-* Sub This conditional was in the context of a for loop that was incremented by 1. In this context, the moment row was no longer less than colCount, it would also no longer be not equal to rowCount.
+  * Sub This conditional was in the context of a for loop that was incremented by 1. In this context, the moment row was no longer less than colCount, it would also no longer be not equal to rowCount.
 * calculateRowTotal() method: replace col < colCount with col != colCount (line 206)
-* Sub this conditional was in the context of a for loop that was incremented by 1. In this context, the moment col was no longer less than colCount, it would also no longer be not equal to rowCount.
+  * Sub this conditional was in the context of a for loop that was incremented by 1. In this context, the moment col was no longer less than colCount, it would also no longer be not equal to rowCount.
 * getCumulativePercentages() methods: replace double total = 0.0 with double total (line 264)
-* Sub Since, in java, all data is initialized to 0 by default, simply declaring total as a double is logically the same as initializing total as 0.0
+  * Sub Since, in java, all data is initialized to 0 by default, simply declaring total as a double is logically the same as initializing total as 0.0
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
