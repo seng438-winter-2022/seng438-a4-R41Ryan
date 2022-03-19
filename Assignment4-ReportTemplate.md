@@ -101,6 +101,7 @@ Below are a few examples of manually finding equivalent mutants. The process use
   * Since, in java, all data is initialized to 0 by default, simply declaring total as a double is logically the same as initializing total as 0.0
 
 # A discussion of what could have been done to improve the mutation score of the test suites
+Our strategy for increasing the mutation scores of DataUtilities and Range classes was to use the PIT Mutation Summary of the original test suite and design new test cases that would pass as JUnit tests but would specifically kill the mutation that survived in the original test suites.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
